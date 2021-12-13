@@ -1,9 +1,6 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-
-
-
+import 'package:flutter/services.dart';
 class HomeScreen extends StatefulWidget {
 static const String routeName = 'HomeScreen';
 
@@ -55,6 +52,27 @@ final list = indexrandomnumber(5,min:0,max:4);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Center(child: Container(
+          color: Color.fromARGB(255, 219, 0, 73),
+          child:
+        TextButton(
+          style: TextButton.styleFrom(
+            textStyle: TextStyle(fontSize: 20,color: Color.fromARGB(255, 219, 0, 73),),
+          ),
+          onPressed: (){SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);},
+          child: Text(''),
+        ),
+          /**ElevatedButton(
+            onPressed: (){
+
+              SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+        }, child: Text(''))**/
+
+        )),
+      ),
 
         backgroundColor: Color.fromARGB(255, 219, 0, 73),
       body: Center(child: Row(
